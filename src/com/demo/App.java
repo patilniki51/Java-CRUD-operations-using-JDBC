@@ -1,10 +1,5 @@
 package com.demo;
 
-import java.text.NumberFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class App  {
@@ -13,16 +8,6 @@ public class App  {
 		
 		EmployeeDAO dao = new EmployeeImpl();
 		Employee e;
-		
-		/*Locale loc = Locale.UK;
-		NumberFormat nf = NumberFormat.getCurrencyInstance(loc);
-		double money = 1_000_000.00d;
-		System.out.println("Money: "+nf.format(money)+" in Locale: "+loc);*/
-		
-		LocalDateTime today = LocalDateTime.now();
-		Locale loc = Locale.ITALY;
-		DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(loc);
-		System.out.println("\n"+"Today's date: "+today.format(df)+" Locale: "+loc.toString()+"\n");
 		
 		do {
 			System.out.println("<-------Menu------>");
